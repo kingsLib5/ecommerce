@@ -11,9 +11,9 @@ import 'swiper/css/pagination';
 function Home() {
   return (
     <>
-      <div className='bg-white h-[50vh] grid grid-cols-12'>
-        {/* Section one remains unchanged */}
-        <div className='col-span-3 flex border-r-1 justify-center pt-[40px] pr-[40px] overflow-hidden'>
+      <div className='bg-white min-h-[50vh] grid grid-cols-12'>
+        {/* Section one – Category Sidebar (visible on md and above) */}
+        <div className='col-span-3 hidden md:flex border-r-1 justify-center pt-[40px] pr-[40px] overflow-hidden'>
           <ul className='gap-[15px] flex flex-col'> 
             <li className='menu-item flex gap-[40px] justify-center items-center'>
               <a href="">Woman’s Fashion</a>
@@ -32,7 +32,7 @@ function Home() {
           </ul>
         </div>
 
-        {/* Section two - Swiper */}
+        {/* Section two – Swiper */}
         <div className='col-span-9'>
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
@@ -150,6 +150,11 @@ function Home() {
           .swiper-button-prev {
             display: none !important;
           }
+          
+          /* Adjust the container height for smaller screens */
+          .h-\[50vh\] {
+            height: auto !important;
+          }
         }
 
         /* New menu animations */
@@ -210,7 +215,7 @@ function Home() {
           width: 100%;
         }
 
-        /* Responsive adjustments */
+        /* Responsive adjustments for menu items */
         @media (max-width: 768px) {
           .menu-item {
             animation: none !important;
@@ -227,6 +232,4 @@ function Home() {
   )
 }
 
-export default Home
-
-
+export default Home;

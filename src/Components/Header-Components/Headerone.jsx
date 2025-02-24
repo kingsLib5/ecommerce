@@ -33,7 +33,8 @@ function Headerone() {
 
   return (
     <>
-      <div className="bg-black h-auto md:h-[7vh] grid grid-cols-1 md:grid-cols-12">
+      {/* Header is hidden on small screens and appears on medium screens (md) and above */}
+      <div className="hidden md:grid bg-black h-auto md:h-[7vh] grid-cols-12">
         {/* Empty column on desktop */}
         <div className="hidden md:block md:col-span-3"></div>
         
