@@ -1,10 +1,11 @@
 import React from 'react'
+import Home from "../Components/Home-Components/Home"
 
 function HomePage() {
   return (
-    <div className=' '>
-      <h1>This is going to be the Homepage</h1>
-    </div>
+    <>
+      <Home/>
+    </>
   )
 }
 

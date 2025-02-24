@@ -66,7 +66,7 @@ function Footer() {
           <motion.div variants={itemVariants} className="flex flex-col items-start">
             <h3 className="text-xl">Account</h3>
             <a href="" className="text-sm mt-2">My Account</a>
-            <a href="" className="text-sm mt-2">Login / Register</a>
+            <a href="/SignUp" className="text-sm mt-2">Login / Register</a>
             <a href="" className="text-sm mt-2">Cart</a>
             <a href="" className="text-sm mt-2">Wishlist</a>
             <a href="" className="text-sm mt-2">Shop</a>
