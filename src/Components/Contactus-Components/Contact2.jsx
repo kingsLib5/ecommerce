@@ -17,7 +17,7 @@ function Contact2() {
             </div>
           </div>
           <p>We are available 24/7, 7 days a week.</p>
-          <p>Phone: +8801611112222</p>
+          <p>Phone: +234 7030024413</p>
         </div>
 
         <div className='p-4 space-y-2 shadow-sm'>
