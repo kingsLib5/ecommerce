@@ -48,7 +48,9 @@ function NavBar() {
 
         {/* Mobile Icons: Cart, Search Toggle, and Menu Button */}
         <div className="md:hidden absolute right-4 pt-[20px] top-1/2 -translate-y-1/2 flex items-center gap-4">
-          <CiShoppingCart size={25} className="text-gray-600" />
+            <a href="/Cart">
+              <CiShoppingCart size={25} className="text-gray-600" />
+            </a> 
           {isSearchOpen ? (
             <div className="relative">
               <input
@@ -96,7 +98,7 @@ function NavBar() {
             <a href="">
               <IoIosHeartEmpty size={25} className="hover:scale-110 transition-transform" />
             </a>
-            <a href="">
+            <a href="/Cart">
               <CiShoppingCart size={25} className="hover:scale-110 transition-transform" /> 
             </a>
             <a href="">
