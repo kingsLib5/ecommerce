@@ -1,6 +1,6 @@
 import React from 'react'
 
-function MyAccout() {
+function MyAccoutone() {
   return (
     <div>
       
@@ -8,4 +8,5 @@ function MyAccout() {
   )
 }
 
-export default MyAccout
+export default MyAccoutone
+

@@ -12,6 +12,7 @@ import SignUp from './Pages/SignUp';
 import Footer from './Components/Footer-Component/Footer';
 import WishList from './Pages/WishList'
 import Cart from './Pages/Cart'
+import MyAccount from './Pages/MyAccount';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -27,6 +28,8 @@ createRoot(document.getElementById('root')).render(
         <Route path="/SignUp" element={<SignUp/>} />
         <Route path="/WishList" element={<WishList/>} />
         <Route path='/Cart'     element={<Cart/>} />
+        <Route path='/MyAccount'     element={<MyAccount/>} />
+        
 
 
         </Routes>
