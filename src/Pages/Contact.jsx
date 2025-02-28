@@ -1,10 +1,11 @@
 import React from 'react'
+import Contact2 from '../Components/Contactus-Components/Contact2'
 
 function Contact() {
   return (
-    <div className=" ">
-      
-    </div>
+    <>
+    <Contact2/>
+    </>
   )
 }
  

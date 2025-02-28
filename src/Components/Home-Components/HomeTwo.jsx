@@ -105,20 +105,20 @@ function HomeTwo() {
       {/* Section One - Timer */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="bg-red-500 w-1 h-6 rounded-sm" />
-          <h5 className="text-red-500 text-sm font-bold">Today's</h5>
-        </div>
+              <div className="bg-red-500 w-1 h-6 rounded-sm" />
+                <h5 className="text-red-500 text-sm font-bold">Today's</h5>
+              </div>
         
-        <h2 className="text-2xl font-semibold">Flash Sales</h2>
+         <h2 className="text-2xl font-semibold">Flash Sales</h2>
         
-        <div className="flex flex-col md:flex-row items-center gap-4">
-          <div className="flex gap-2">
-            <div className="text-center">
-              <h6 className="text-xs">Days</h6>
-              <h3 className="text-2xl font-semibold">{String(timeLeft.days).padStart(2, '0')}</h3>
-            </div>
-            <span className="text-xl md:mt-4">:</span>
-            <div className="text-center">
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <div className="flex gap-2">
+                <div className="text-center">
+                 <h6 className="text-xs">Days</h6>
+                 <h3 className="text-2xl font-semibold">{String(timeLeft.days).padStart(2, '0')}</h3>
+                </div>
+              <span className="text-xl md:mt-4">:</span>
+              <div className="text-center">
               <h6 className="text-xs">Hours</h6>
               <h3 className="text-2xl font-semibold">{String(timeLeft.hours).padStart(2, '0')}</h3>
             </div>

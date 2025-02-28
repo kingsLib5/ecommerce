@@ -5,11 +5,10 @@ import { BrowserRouter, Routes, Route,  } from 'react-router-dom';
 import Headerone from './Components/Header-Components/Headerone';
 import Login from './Components/Sign Up component/Login';
 import NavBar from './Components/Header-Components/NavBar';
-import HomePage from './Pages/HomePage';
-// import Contact from './Pages/Contact';
+import HomePage from './Pages/HomePage';;
 // import About from './Pages/About';
 import About from './Components/About-Components/About'
-import Contact from './Components/Contactus-Components/Contact'
+import Contact from './Pages/Contact'
 import SignUp from './Pages/SignUp';
 import Footer from './Components/Footer-Component/Footer';
 import WishList from './Pages/WishList'
