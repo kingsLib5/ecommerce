@@ -5,6 +5,8 @@ import HomeThree from '../Components/Home-Components/HomeThree'
 import HomeFour from '../Components/Home-Components/HomeFour'
 import HomeFive from '../Components/Home-Components/HomeFive'
 import HomeSix from '../Components/Home-Components/HomeSix'
+import HomeSeven from '../Components/Home-Components/HomeSeven'
+import HomeEight from '../Components/Home-Components/HomeEight'
 
 function HomePage() {
   return (
@@ -15,7 +17,8 @@ function HomePage() {
       <HomeFour/>
       <HomeFive/>
       <HomeSix/>
-
+      <HomeSeven/>
+      <HomeEight/>
     </>
   )
 }
