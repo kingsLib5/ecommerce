@@ -99,10 +99,10 @@ function NavBar() {
               <IoIosHeartEmpty size={25} className="hover:scale-110 transition-transform" />
             </a>
             <a href="/Cart">
-              <CiShoppingCart size={25} className="hover:scale-110 transition-transform" /> 
+              <CiShoppingCart size={25} className="hover:scale-110 transition-transform " /> 
             </a>
-            <a href="">
-              <IoPersonOutline size={25} className="hover:scale-110 transition-transform" />
+            <a href="/MyAccount">
+              <IoPersonOutline size={25} className="hover:scale-110 transition-transform focus:bg-[red] focus:text-[red]" />
             </a>
           </div>
         </div>
@@ -129,7 +129,7 @@ function NavBar() {
                   ))}
                 </ul>
                 <a href="" className="absolute top-2 right-4">
-                  <IoPersonOutline size={25} className="text-gray-600" />
+                  <IoPersonOutline size={25} className="text-gray-600 focus:bg-[red]" />
                 </a>
              </div>
 

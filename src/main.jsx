@@ -13,7 +13,8 @@ import SignUp from './Pages/SignUp';
 import Footer from './Components/Footer-Component/Footer';
 import WishList from './Pages/WishList'
 import Cart from './Pages/Cart'
-import MyAccount from './Pages/MyAccount';
+// import MyAccount from './Pages/MyAccount';
+import MyAccount from './Components/MyAccount-Components/MyAccount'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

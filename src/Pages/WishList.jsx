@@ -65,7 +65,24 @@ const suggestions = [
 
 const WishList = () => {
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 space-y-3">
+   <a
+  href="/MyAccount"
+  className="flex items-center space-x-2 mr-[40px]"
+  aria-label="Return to previous page"
+>
+  <svg
+    className="w-5 h-5 text-red-500"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+  </svg>
+  <span className="font-serif text-red-500">Return to Previous Page</span>
+</a>
+
       <h2 className="text-lg font-semibold mb-4">Wishlist ({products.length})</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {products.map((product) => (
