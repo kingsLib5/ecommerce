@@ -19,7 +19,7 @@ function HomeThree() {
 
   return (
     <>
-      <div className='h-auto md:h-[60vh] py-8 px-4 md:px-0'>
+      <div className='h-auto md:h-[40vh] py-8 px-4 md:px-0'>
         <div className='container mx-auto'>
           {/* Header Section */}
           <div className='flex flex-col md:flex-row justify-between items-center mb-8 animate-slide-down'>
