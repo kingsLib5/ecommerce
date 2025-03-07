@@ -22,33 +22,56 @@ function Contact2() {
           </nav>
         </div>
 
-        {/* Mobile Write To Us Section */}
-        <div className="block md:hidden mb-8 p-4 animate-slide-in-right">
-          <div className="rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <div className="p-6 space-y-2 shadow-sm">
-              <div className="flex items-center gap-5 mb-4">
-                <div className="flex items-center justify-center h-10 w-10 rounded-full bg-red-700 animate-icon-scale">
-                  <MdOutlineEmail className="text-white text-xl" />
+        {/* Mobile Version: Only show Call To Us & Write To Us */}
+        <div className="block md:hidden space-y-8">
+          {/* Mobile Call To Us Section */}
+          <div className="p-4 animate-slide-in-left">
+            <div className="rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="p-6 space-y-2 shadow-sm">
+                <div className="flex items-center gap-5 mb-4">
+                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-red-700 animate-icon-scale">
+                    <IoCallOutline className="text-white text-xl" />
+                  </div>
+                  <p className="font-semibold text-lg">Call To Us</p>
                 </div>
-                <p className="font-semibold text-lg">Write To Us</p>
+                <p className="text-gray-600">
+                  We are available 24/7, 7 days a week.
+                </p>
+                <p className="text-red-700 font-medium">
+                  Phone: +234 7030024413
+                </p>
               </div>
-              <p className="text-gray-600 text-[15px]">
-                Fill out our form and we will contact you within 24 hours.
-              </p>
-              <p className="text-red-700 font-medium">
-                Emails: customer@codivora.com
-              </p>
-              <p className="text-red-700 font-medium">
-                Emails: support@codivora.com
-              </p>
+            </div>
+          </div>
+
+          {/* Mobile Write To Us Section */}
+          <div className="p-4 animate-slide-in-right">
+            <div className="rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="p-6 space-y-2 shadow-sm">
+                <div className="flex items-center gap-5 mb-4">
+                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-red-700 animate-icon-scale">
+                    <MdOutlineEmail className="text-white text-xl" />
+                  </div>
+                  <p className="font-semibold text-lg">Write To Us</p>
+                </div>
+                <p className="text-gray-600 text-[15px]">
+                  Fill out our form and we will contact you within 24 hours.
+                </p>
+                <p className="text-red-700 font-medium">
+                  Emails: customer@codivora.com
+                </p>
+                <p className="text-red-700 font-medium">
+                  Emails: support@codivora.com
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Main Content Grid */}
-        <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
-          {/* Contact Info Section for Desktop */}
-          <div className="hidden md:block p-6 md:p-10 animate-slide-in-left">
+        {/* Desktop Version: Show both Contact Info and the Contact Form */}
+        <div className="hidden md:grid gap-8 grid-cols-1 md:grid-cols-2">
+          {/* Contact Info Section */}
+          <div className="p-6 md:p-10 animate-slide-in-left">
             <div className="rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
               {/* Phone Card */}
               <div className="p-6 border-b border-gray-300 space-y-2 shadow-sm">
@@ -87,8 +110,8 @@ function Contact2() {
             </div>
           </div>
 
-          {/* Contact Form Section */}
-          <div className="flex flex-col gap-8 animate-slide-in-right">
+          {/* Contact Form Section (only on desktop) */}
+          <div className="hidden md:flex flex-col gap-8 animate-slide-in-right">
             <div className="w-full p-6 rounded-xl shadow-lg grid grid-cols-1 md:grid-cols-3 gap-4 transition-all duration-300 hover:shadow-xl">
               <input
                 type="text"
@@ -115,9 +138,7 @@ function Contact2() {
             </div>
 
             <div className="w-full p-6 rounded-xl shadow-lg flex justify-end">
-              <button
-                className="h-[50px] w-full md:w-auto bg-red-700 hover:bg-red-800 text-white font-semibold py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105 active:scale-95"
-              >
+              <button className="h-[50px] w-full md:w-auto bg-red-700 hover:bg-red-800 text-white font-semibold py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105 active:scale-95">
                 Send Message
               </button>
             </div>

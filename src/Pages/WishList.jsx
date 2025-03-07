@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import BAG from "../assets/BAG.png";
 import CPU from "../assets/CPU.png";
 import PAD from "../assets/PAD.png";
@@ -14,13 +15,13 @@ const products = [
     name: "Gucci duffle bag",
     price: "$960",
     oldPrice: "$1180",
-    image: BAG, // ✅ Using imported image
+    image: BAG,
   },
   {
     id: 2,
     name: "RGB Liquid CPU Cooler",
     price: "$1860",
-    image: CPU, // ✅ Using imported image
+    image: CPU,
   },
   {
     id: 3,
@@ -65,41 +66,91 @@ const suggestions = [
 
 const WishList = () => {
   return (
-    <div className="container mx-auto p-4">
-      <h2 className="text-lg font-semibold mb-4">Wishlist ({products.length})</h2>
+    <motion.div
+      className="container mx-auto p-4"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+    >
+      <motion.h2
+        className="text-lg font-semibold mb-4"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+        viewport={{ once: true }}
+      >
+        Wishlist ({products.length})
+      </motion.h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {products.map((product) => (
-          <div key={product.id} className="border rounded-lg p-2 shadow-md">
+        {products.map((product, index) => (
+          <motion.div
+            key={product.id}
+            className="border rounded-lg p-2 shadow-md"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+            viewport={{ once: true }}
+          >
             <img
-              src={product.image} // ✅ Correctly referencing imported image
+              src={product.image}
               alt={product.name}
               className="w-full h-40 object-cover rounded-md"
             />
             <h3 className="text-sm font-medium mt-2">{product.name}</h3>
             <p className="text-red-500 font-semibold">{product.price}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
-      <button className="mt-4 border p-2 px-4 rounded-md">Move All To Bag</button>
-      
-      <h2 className="text-lg font-semibold mt-6">Just For You</h2>
+      <motion.button
+        className="mt-4 border p-2 px-4 rounded-md"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+        viewport={{ once: true }}
+      >
+        Move All To Bag
+      </motion.button>
+
+      <motion.h2
+        className="text-lg font-semibold mt-6"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.6 }}
+        viewport={{ once: true }}
+      >
+        Just For You
+      </motion.h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
-        {suggestions.map((item) => (
-          <div key={item.id} className="border rounded-lg p-2 shadow-md">
+        {suggestions.map((item, index) => (
+          <motion.div
+            key={item.id}
+            className="border rounded-lg p-2 shadow-md"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 + 0.3 }}
+            viewport={{ once: true }}
+          >
             <img
-              src={item.image} // ✅ Correctly referencing imported image
+              src={item.image}
               alt={item.name}
               className="w-full h-40 object-cover rounded-md"
             />
             <h3 className="text-sm font-medium mt-2">{item.name}</h3>
             <p className="text-red-500 font-semibold">{item.price}</p>
-            <button className="mt-2 bg-black text-white py-1 px-3 rounded-md w-full">
+            <motion.button
+              className="mt-2 bg-black text-white py-1 px-3 rounded-md w-full"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: index * 0.1 + 0.4 }}
+              viewport={{ once: true }}
+            >
               Add to Cart
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
