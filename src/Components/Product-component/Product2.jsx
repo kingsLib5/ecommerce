@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-function HomeTwo() {
+function Product2() {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -16,24 +16,24 @@ function HomeTwo() {
   });
   const [swiperInstance, setSwiperInstance] = useState(null);
 
-  useEffect(() => {
-    const target = new Date();
-    target.setDate(target.getDate() + 3); // Set 3 days from now
+//   useEffect(() => {
+//     const target = new Date();
+//     target.setDate(target.getDate() + 3); // Set 3 days from now
 
-    const timer = setInterval(() => {
-      const now = new Date();
-      const difference = target - now;
+//     const timer = setInterval(() => {
+//       const now = new Date();
+//       const difference = target - now;
 
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+//       const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+//       const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//       const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+//       const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-      setTimeLeft({ days, hours, minutes, seconds });
-    }, 1000);
+//       setTimeLeft({ days, hours, minutes, seconds });
+//     }, 1000);
 
-    return () => clearInterval(timer);
-  }, []);
+//     return () => clearInterval(timer);
+//   }, []);
 
   const products = [
     {
@@ -114,11 +114,11 @@ function HomeTwo() {
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
           <div className="bg-red-500 w-1 h-6 rounded-sm" />
-          <h5 className="text-red-500 text-sm font-bold">Today's</h5>
+          <h5 className="text-red-500 text-sm font-bold">Related item</h5>
         </div>
-        <h2 className="text-2xl font-semibold">Flash Sales</h2>
+        {/* <h2 className="text-2xl font-semibold">Flash Sales</h2> */}
         <div className="flex flex-col md:flex-row items-center gap-4">
-          <div className="flex gap-2">
+          {/* <div className="flex gap-2">
             <div className="text-center">
               <h6 className="text-xs">Days</h6>
               <h3 className="text-2xl font-semibold">{String(timeLeft.days).padStart(2, '0')}</h3>
@@ -138,7 +138,7 @@ function HomeTwo() {
               <h6 className="text-xs">Seconds</h6>
               <h3 className="text-2xl font-semibold">{String(timeLeft.seconds).padStart(2, '0')}</h3>
             </div>
-          </div>
+          </div> */}
 
           {/* Custom Arrow Buttons */}
           <div className="flex gap-2">
@@ -236,4 +236,4 @@ function HomeTwo() {
   );
 }
 
-export default HomeTwo;
+export default Product2;

@@ -76,11 +76,38 @@ function MyAccoutone() {
                     </p>
                   </div>
                 )}
+                
               </div>
               <div className="mb-[20px]">
-                <a href="/WishList">
-                  <div className="font-bold">My WishList</div>
-                </a>
+                <h4
+                  className="font-bold"
+                  onClick={() => setWishlistOpen(!wishlistOpen)}
+                >
+                  My  Wishlist
+                </h4>
+  
+                {/* {wishlistOpen && (
+                  <div className="p-5">
+                    <p
+                      onClick={() => setSelectedWishlistOption("wishlist")}
+                      className={`cursor-pointer ${selectedWishlistOption === "return" ? "text-[red]" : ""}`}
+                    >
+                      <a href="/WishList">Wishlist</a>
+                    </p>
+                    <p
+                      onClick={() => setSelectedWishlistOption("product")}
+                      className={`cursor-pointer ${selectedWishlistOption === "return" ? "text-[red]" : ""}`}
+                    >
+                      <a href="">Product</a>
+                    </p>
+                    <p
+                      onClick={() => setSelectedWishlistOption("checkout")}
+                      className={`cursor-pointer ${selectedWishlistOption === "cancel" ? "text-[red]" : ""}`}
+                    >
+                      <a href="">Checkouts</a>
+                    </p>
+                  </div>
+                )} */}
               </div>
             </div>
           </div>
@@ -129,7 +156,7 @@ function MyAccoutone() {
                   </div>
                   <div className="grid grid-cols-[10%_20%] justify-end ">
                      <div className="  items-center justify-center flex rounded-lg"><p>Cancel</p></div>
-                     <div className="bg-[red] items-center justify-center flex rounded-lg text-white">
+                     <div className="bg-[red] items-center justify-center flex rounded-lg text-white  hover:bg-red-600">
                       <button>Save changes</button>
                      </div>
                   </div>
