@@ -14,6 +14,7 @@ import WishList from './Pages/WishList'
 import Cart from './Pages/Cart'
 // import MyAccount from './Pages/MyAccount';
 import MyAccount from './Components/MyAccount-Components/MyAccount'
+import Billing from './Components/Billing-Details/Billing'
 import Product from './Components/Product-component/Product'
 
 createRoot(document.getElementById('root')).render(
@@ -32,6 +33,8 @@ createRoot(document.getElementById('root')).render(
         <Route path='/Cart'     element={<Cart/>} />
         <Route path='/MyAccount'     element={<MyAccount/>} />
         <Route path='/product' element={<Product/>} />
+        <Route path='/Billing' element={<Billing/>} />
+
         
 
 
