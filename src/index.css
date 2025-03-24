@@ -28,4 +28,58 @@
     opacity: 0;
   }
 
+  /* Add these styles to your existing global styles */
+  @media (max-width: 768px) {
+    .swiper-slide .bg-black {
+      background-image: inherit !important;
+      background-size: cover;
+      background-position: center;
+      min-height: 300px;
+      position: relative;
+    }
+  
+    .swiper-slide .bg-black > div:first-child {
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+  
+    .swiper-slide .bg-black > div:last-child {
+      display: none;
+    }
+  
+    .swiper-slide .bg-black::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.3);
+      z-index: 0;
+    }
+  
+    /* Use data attributes to set the correct background images */
+    .swiper-slide .bg-black[data-mobile-bg="iphone14"] {
+      background-image: url(./assets/iphone.jpg) !important;
+    }
+  
+    .swiper-slide .bg-black[data-mobile-bg="iphone15"] {
+      background-image: url(./assets/iphone15.jpg) !important;
+    }
+  }
+  
+
+  /* Add to your global CSS */
+.transition-colors {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-image {
+  transition: transform 0.3s ease;
+}
+
+.hover\:scale-105:hover .card-image {
+  transform: scale(1.05);
+}
   
