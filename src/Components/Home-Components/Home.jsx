@@ -44,7 +44,10 @@ function Home() {
             className="h-full"
           >
             <SwiperSlide>
-              <div className='bg-black grid grid-cols-2 ml-[60px] mr-[110px] mt-[30px] transition-all duration-500 hover:scale-[0.98]'>
+            <div
+                    className="bg-black grid grid-cols-2 ml-[60px] mr-[110px] mt-[30px] transition-all duration-500 hover:scale-[0.98]"
+                    data-mobile-bg="iphone14"
+                  >
                 <div className='pr-[170px] mb-[60px] text-white pt-[55px]'>
                   <ul className='animate-fade-in'>
                     <li className='flex justify-center items-center text-[13px] gap-[18px]'>
@@ -65,7 +68,10 @@ function Home() {
             </SwiperSlide>
 
             <SwiperSlide>
-              <div className='bg-black grid grid-cols-2 ml-[60px] mr-[110px] mt-[30px] transition-all duration-500 hover:scale-[0.98]'>
+            <div
+  className="bg-black grid grid-cols-2 ml-[60px] mr-[110px] mt-[30px] transition-all duration-500 hover:scale-[0.98]"
+  data-mobile-bg="iphone15"
+>
                 <div className='pr-[170px] mb-[60px] text-white pt-[55px]'>
                   <ul className='animate-fade-in'>
                     <li className='flex justify-center items-center text-[13px] gap-[18px]'>
